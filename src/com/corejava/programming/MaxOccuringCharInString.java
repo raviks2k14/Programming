@@ -7,7 +7,7 @@ import java.util.Set;
 public class MaxOccuringCharInString {
 
 	public static void main(String[] args) {
-		String testString = " I love my daughter and my family in the whole universe";
+		String testString = "The earliest meaning of English bully was “sweetheart.” The word was probably borrowed from Dutch boel, “lover.” Later bully was used for anyone who seemed a good fellow, then for a blustering daredevil. Today, a bully is usually one whose claims to strength and courage are based on the intimidation of those who are weaker.";
 		String replacedString  = testString.replaceAll("\\s", ""); //Regex for whitespace is \\s
 		
 		//Convert the string to char array
@@ -42,7 +42,7 @@ public class MaxOccuringCharInString {
 		}
 				
 		Set<Entry<Character, Integer>> finalEntrySet = charsWithSameCount.entrySet();
-		System.out.println("The maximum occuring characters and their count in the below String \n\""+testString+"\" \nis : "+finalEntrySet.toString());
+		System.out.println("The maximum occuring character(s) and their count in the below String \n\""+testString+"\" \nis : "+finalEntrySet.toString());
 		
 	}
 

@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.Set;
 
-public class HashMapBasics {
+public class DifferentWaysToIteratorHashMap {
 
 	public static void main(String[] args) {
 		HashMap<Integer, String> hshMap = new HashMap<>();
@@ -17,7 +17,7 @@ public class HashMapBasics {
 		System.out.println("// 1st method of iteration ---> Using only entrySet()\n");
 		Set<Entry<Integer, String>> entrySet = hshMap.entrySet();
 		for (Entry<Integer, String> entry : entrySet) {
-			System.out.println("Key: " + entry.getKey() + " Value: " + entry.getValue());
+			System.out.println("Key : " + entry.getKey() + ", Value : " + entry.getValue());
 		}
 		
 		// 2nd method of iteration ---> Using only entrySet() + iterator
@@ -25,13 +25,13 @@ public class HashMapBasics {
 		Iterator<Entry<Integer, String>> entrySetIterator = entrySet.iterator();
 		while(entrySetIterator.hasNext()){
 			Entry<Integer, String> entry = entrySetIterator.next();
-			System.out.println("Key" + entry.getKey() + " Value: " + entry.getValue());
+			System.out.println("Key : " + entry.getKey() + ", Value : " + entry.getValue());
 		}
 
 		// 3rd method of iteration ---> Using only keySet()
 		System.out.println("\n// 3rd method of iteration ---> Using only keySet()\n");
 		for (Integer key : hshMap.keySet()) {
-			System.out.println("Key : " + key + " Value : " + hshMap.get(key));
+			System.out.println("Key : " + key + ", Value : " + hshMap.get(key));
 		}
 		
 		// 4th method of iteration ---> Using only keySet() + iterator
@@ -40,7 +40,7 @@ public class HashMapBasics {
 		Iterator<Integer> itKeySet = intKeys.iterator();
 		while(itKeySet.hasNext()){
 			Integer integer = itKeySet.next();
-			System.out.println("Key : " + integer +" Value : "+hshMap.get(integer));
+			System.out.println("Key : " + integer +", Value : "+hshMap.get(integer));
 		}
 	}
 }

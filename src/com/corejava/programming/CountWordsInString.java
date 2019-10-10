@@ -4,21 +4,22 @@ public class CountWordsInString {
 
 	public static void main(String[] args) {
 
-		String str = "Hi This is the sentence for which you need to count the number of words";
-		System.out.println("Sentence :" + str);
+		String str = "At first glance, your code will not compile. Since the nested if statement doesn't have any braces, it will consider the next line the code that it should execute. Also, you are comparing a char against a String, . Try comparing the values as chars instead. I think the correct syntax would be:";
+		System.out.println("Sentence : " + str);
 		int wordCount = returnWordCount(str);
-		System.out.println("The number of words in the above sentence is :"
+		System.out.println("The number of words in the above sentence is : "
 				+ wordCount);
 	}
 
 	public static int returnWordCount(String str) {
 		int wordCount = 0;
-
 		char chr[] = new char[str.length()];
-		System.out.println("Lenght of str :" + str.length());
 		for (int i = 0; i < chr.length; i++) {
 			chr[i] = str.charAt(i);
-			System.out.println("Value of i :" + i);
+			if (i > 0 && Character.isWhitespace(chr[i - 1])
+					&& Character.isWhitespace(chr[i])) {
+				continue;
+			}
 			if (((i > 0) && (Character.isWhitespace(chr[i])))
 					|| (i == str.length() - 1)) {
 				wordCount++;

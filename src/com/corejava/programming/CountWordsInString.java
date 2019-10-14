@@ -16,10 +16,13 @@ public class CountWordsInString {
 		char chr[] = new char[str.length()];
 		for (int i = 0; i < chr.length; i++) {
 			chr[i] = str.charAt(i);
+			// check for consecutive whitespace
 			if (i > 0 && Character.isWhitespace(chr[i - 1])
 					&& Character.isWhitespace(chr[i])) {
 				continue;
 			}
+			// increment count only if you find a whitespace and when the
+			// control reaches the end of string
 			if (((i > 0) && (Character.isWhitespace(chr[i])))
 					|| (i == str.length() - 1)) {
 				wordCount++;

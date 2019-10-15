@@ -12,7 +12,6 @@ public class TimerTaskTest {
 		TimerTask task = new Helper();
 		timer.schedule(task, 0, 30000);
 	}
-
 }
 
 class Helper extends TimerTask {

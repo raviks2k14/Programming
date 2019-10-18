@@ -1,4 +1,4 @@
-package com.corejava.programming;
+package com.corejava.collections;
 
 public class StudentComparable implements Comparable {
 	private String studentname;

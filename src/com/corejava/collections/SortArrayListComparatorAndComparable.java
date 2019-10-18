@@ -1,4 +1,4 @@
-package com.corejava.programming;
+package com.corejava.collections;
 
 public class SortArrayListComparatorAndComparable {
 

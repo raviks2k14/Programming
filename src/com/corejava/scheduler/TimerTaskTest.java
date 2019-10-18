@@ -1,4 +1,4 @@
-package com.corejava.programming;
+package com.corejava.scheduler;
 
 import java.util.Timer;
 import java.util.TimerTask;

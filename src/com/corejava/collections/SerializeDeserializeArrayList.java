@@ -1,4 +1,4 @@
-package com.corejava.programming;
+package com.corejava.collections;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

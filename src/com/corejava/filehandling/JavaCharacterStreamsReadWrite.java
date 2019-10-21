@@ -1,18 +1,18 @@
 package com.corejava.filehandling;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
-public class JavaByteStreamsReadWrite {
+public class JavaCharacterStreamsReadWrite {
 
 	public static void main(String[] args) {
 		String inputFilePath = "/Users/ravikumarks/Desktop/Reading/filesforprograms/input.txt";
 		String outputFilePath = "/Users/ravikumarks/Desktop/Reading/filesforprograms/output.txt";
 
-		JavaByteStreamsReadWrite obj = new JavaByteStreamsReadWrite();
+		JavaCharacterStreamsReadWrite obj = new JavaCharacterStreamsReadWrite();
 		try {
 			obj.writeToFile(inputFilePath, outputFilePath);
 		} catch (FileNotFoundException e) {
@@ -27,27 +27,27 @@ public class JavaByteStreamsReadWrite {
 
 	public void writeToFile(String inputFilePath, String outputFilePath)
 			throws IOException {
-		FileInputStream fis = null; // Used to read 8 bit byte
-		FileOutputStream fos = null; // Used to write 8 bit byte
+		FileReader fr = null; // Used to read 16 bit unicode
+		FileWriter fw = null; // Used to write 16 bit unicode
 
 		try {
 			System.out
 					.println("Started initializing the File input and output streams...");
-			fis = new FileInputStream(new File(inputFilePath));
-			fos = new FileOutputStream(new File(outputFilePath));
+			fr = new FileReader(new File(inputFilePath));
+			fw = new FileWriter(new File(outputFilePath));
 			int c = 0;
 			System.out.println("Started reading, writing to files...");
-			while ((c = fis.read()) != -1) {
-				fos.write(c);
+			while ((c = fr.read()) != -1) {
+				fw.write(c);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			if (fos != null) {
-				fos.close();
+			if (fw != null) {
+				fw.close();
 			}
-			if (fis != null) {
-				fis.close();
+			if (fr != null) {
+				fr.close();
 			}
 		}
 

@@ -10,9 +10,9 @@ public class JavaInputStreamReaderStandardStreams {
 										// char
 
 		try {
-			isr = new InputStreamReader(System.in); // Standard input : eading from Keyboard
+			isr = new InputStreamReader(System.in); // Standard input : reading from Keyboard
 													// input
-			System.out.println("Enter the characters and when done, press 'q'");
+			System.out.println("Enter the characters and when done, press 'q' to quit");
 			char c;
 			do {
 				c = (char) isr.read();

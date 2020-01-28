@@ -1,4 +1,4 @@
-package com.corejava.collections;
+package com.corejava.sorting;
 
 public class BubbleSortProgramming {
 

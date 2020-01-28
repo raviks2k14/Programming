@@ -3,7 +3,7 @@ package com.corejava.miscellaneous;
 public class JavaFibonacci {
 
 	public static void main(String[] args) {
-		fibonacciImplementation(5);
+		fibonacciImplementation(0);
 	}
 
 	public static void fibonacciImplementation(int startValue) {

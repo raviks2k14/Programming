@@ -11,7 +11,7 @@ public class ArraysMergeUniqueNames {
 	public static void main(String[] args) {
 		String str1Array[] = new String[] { "Ava", "Emma", "Olivia" };
 		String str2Array[] = new String[] { "Olivia", "Sophia", "Emma" };
-		// withCollections(str1Array, str2Array);
+		//withCollections(str1Array, str2Array);
 		withOutCollections(str1Array, str2Array);
 
 	}

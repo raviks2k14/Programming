@@ -22,6 +22,8 @@ public class HashSetPrograms {
 			System.out.println(i.next());
 		}
 		
+		System.out.println("\n");
+		
 		//2nd way of iteration
 		for(String str : strSet){
 			System.out.println(str);

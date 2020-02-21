@@ -13,7 +13,6 @@ public class ConvertLinkedListToArrayList {
 		linkedList.add("GHI");
 		linkedList.add("JKL");
 		linkedList.add("MNO");
-		
 		System.out.println("Before converting linked list to arraylist\n");
 		
 		for(String str : linkedList){

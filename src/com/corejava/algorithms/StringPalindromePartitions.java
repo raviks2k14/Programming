@@ -8,31 +8,27 @@ public class StringPalindromePartitions {
 		String inputString = "noition";
 		ArrayList<String> palindromeList = getPalindromeList(inputString);
 		System.out.println("The final palindrome list of the String " + "\'" + inputString + "\'" + " : ");
-		for(String str : palindromeList) {
+		for (String str : palindromeList) {
 			System.out.println(str);
 		}
 	}
 
 	public static ArrayList<String> getPalindromeList(String inputString) {
 		ArrayList<String> finalPalindromeList = new ArrayList<String>();
-		ArrayList<ArrayList<String>> finalIndividualPalindromeList = new ArrayList<ArrayList<String>>();
+		ArrayList<String> individualSubStringList = new ArrayList<String>();
 		int strLength = inputString.length();
 
 		for (int i = 0; i < inputString.length(); i++) {
-			ArrayList<String> individualPalindromeList = new ArrayList<String>();
 			for (int j = strLength; j > i; j--) {
 				String subStr = inputString.substring(i, j);
-				individualPalindromeList.add(subStr);
+				individualSubStringList.add(subStr);
 			}
-			finalIndividualPalindromeList.add(individualPalindromeList);
 		}
 
-		for (ArrayList<String> aList : finalIndividualPalindromeList) {
-			for (String str : aList) {
-				boolean isStrPalindrome = isPalindrome(str);
-				if (isStrPalindrome) {
-					finalPalindromeList.add(str);
-				}
+		for (String str : individualSubStringList) {
+			boolean isStrPalindrome = isPalindrome(str);
+			if (isStrPalindrome) {
+				finalPalindromeList.add(str);
 			}
 		}
 

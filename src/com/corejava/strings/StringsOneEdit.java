@@ -54,8 +54,8 @@ public class StringsOneEdit {
 
 	public static void main(String[] args) {
 		StringsOneEdit classObj = new StringsOneEdit();
-		String s = "abc";
-		String t = "abc";
+		String s = "geeks";
+		String t = "geek";
 
 		System.out.println(classObj.isOneEditDistance(s, t));
 	}

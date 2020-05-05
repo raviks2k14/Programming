@@ -2,20 +2,24 @@ package com.corejava.miscellaneous;
 
 public class JavaFactorial {
 
-	public static void main(String[] args) {
-		factorialOfNumber(3);
-	}
-
-	public static void factorialOfNumber(int number) {
-
-		int factorialVal = number;
-
-		for (int i = 1; i < number; i++) {
-			factorialVal = factorialVal * (number - i);
-		}
-
-		System.out.println("The factorial of given number " + number + " is : "
-				+ factorialVal);
-	}
+	// method to find factorial of given number 
+    static int factorial(int n) 
+    { 
+        if (n != 0) {
+        	return n * factorial(n - 1);  
+        } else {
+        	return 1;
+        }
+        
+    } 
+  
+    // Driver method 
+    public static void main(String[] args) 
+    { 
+        int num = 5; 
+        System.out.println( 
+            "Factorial of " + num 
+            + " is " + factorial(5)); 
+    } 
 
 }

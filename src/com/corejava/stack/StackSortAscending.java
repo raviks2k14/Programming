@@ -3,29 +3,46 @@ package com.corejava.stack;
 import java.util.Stack;
 
 public class StackSortAscending {
-	
-	public static Stack<Integer> sortstack(Stack<Integer> input) {
-		Stack<Integer> tmpStack = new Stack<Integer>();
-		while (!input.isEmpty()) {
-			int tmp = input.pop();
-			while (!tmpStack.isEmpty() && tmpStack.peek() > tmp) {
-				input.push(tmpStack.pop());
+
+	public static Stack<Integer> sortstack(Stack<Integer> srcStack) {
+		Stack<Integer> destStack = new Stack<Integer>();
+//		while (!srcStack.isEmpty()) {
+//			int tmp = srcStack.pop();
+//			while (!destStack.isEmpty() && destStack.peek() > tmp) {
+//				srcStack.push(destStack.pop());
+//			}
+//			destStack.push(tmp);
+//		}
+//		return destStack;
+
+		while (!srcStack.isEmpty()) {
+			if (destStack.isEmpty()) {
+				destStack.push(srcStack.pop());
+			} else {
+				int tmp = srcStack.pop();
+				if (tmp < destStack.peek()) {
+					srcStack.push(destStack.pop());
+					srcStack.push(tmp);
+				} else {
+					destStack.push(tmp);
+				}
 			}
-			tmpStack.push(tmp);
 		}
-		return tmpStack;
+
+		return destStack;
+
 	}
 
 	public static void main(String args[]) {
-		Stack<Integer> input = new Stack<Integer>();
-		input.add(34);
-		input.add(3);
-		input.add(31);
-		input.add(98);
-		input.add(92);
-		input.add(23);
+		Stack<Integer> srcStack = new Stack<Integer>();
+		srcStack.add(34);
+		srcStack.add(3);
+		srcStack.add(31);
+		srcStack.add(98);
+		srcStack.add(92);
+		srcStack.add(23);
 
-		Stack<Integer> tmpStack = sortstack(input);
+		Stack<Integer> tmpStack = sortstack(srcStack);
 		System.out.println("Sorted numbers are:");
 
 		while (!tmpStack.empty()) {

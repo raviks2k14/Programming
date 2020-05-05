@@ -39,6 +39,17 @@ public class LinkedListSortedInsertNode {
 			prev = n;
 			n = n.next;
 		}
+		
+//		Node newNode = new Node(number);
+//		Node n = head;
+//		while(n!=null) {
+//			if(newNode.data > n.data && newNode.data < n.next.data) {
+//				Node temp = n.next;
+//				n.next = newNode;
+//				newNode.next = temp;
+//			}
+//			n = n.next;
+//		}
 	}
 
 	public static void main(String args[]) {

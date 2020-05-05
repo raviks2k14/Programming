@@ -1,5 +1,7 @@
 package com.corejava.stack;
 
+import java.util.Arrays;
+
 public class StackNStacksInOneArray {
 
 	int stackData[];
@@ -24,6 +26,11 @@ public class StackNStacksInOneArray {
 		for (int i = 0; i < arraySize - 1; i++)
 			nextIndex[i] = i + 1;
 		nextIndex[arraySize - 1] = -1;
+		
+		System.out.println("Stack Data : "+Arrays.toString(stackData));
+		System.out.println("Top of Stack : "+Arrays.toString(topOfStack));
+		System.out.println("Next Index : "+Arrays.toString(nextIndex));
+
 
 	}
 
@@ -38,6 +45,10 @@ public class StackNStacksInOneArray {
 		stackData[currentIndex] = data;
 		nextIndex[currentIndex] = topOfStack[stack];
 		topOfStack[stack] = currentIndex;
+		
+		System.out.println("Stack Data : "+Arrays.toString(stackData));
+		System.out.println("Top of Stack : "+Arrays.toString(topOfStack));
+		System.out.println("Next Index : "+Arrays.toString(nextIndex));
 	}
 
 	int pop(int stack) {

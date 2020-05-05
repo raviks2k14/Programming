@@ -5,6 +5,7 @@ public class JavaPalindrome {
 	public static void main(String[] args) {
 		// withLibraryMethods("Deleveled");
 		// withoutLibraryMethods("Deleveled");
+		//usingWhile("Deleveled");
 		isPalindrome(121);
 	}
 
@@ -26,6 +27,25 @@ public class JavaPalindrome {
 		System.out
 				.println("(withoutLibraryMethods) Is the string a palindrome? : "
 						+ originalStr.equalsIgnoreCase(sbuf.toString()));
+	}
+	
+	public static void usingWhile(String str) {
+		String origStr = str.toLowerCase();
+		int i=0;
+		int j = str.length()-1;
+		boolean palindrome=true;
+		while(i<j) {
+			if(origStr.charAt(i)==origStr.charAt(j)) {
+				i++;
+				j--;
+			}else {
+				palindrome=false;
+				return;
+			}
+		}
+		System.out
+				.println("(usingWhile) Is the string a palindrome? : "
+						+palindrome);
 	}
 
 	public static void isPalindrome(int number) {

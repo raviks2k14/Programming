@@ -43,9 +43,9 @@ public class LinkedListCountInt {
 	public static void main(String[] args) {
 		LinkedListCountInt linkedList = new LinkedListCountInt();
 		linkedList.push(7);
-		linkedList.push(1);
+		linkedList.push(5);
 		linkedList.push(3);
-		linkedList.push(2);
+		linkedList.push(5);
 		linkedList.push(3);
 		linkedList.push(9);
 		linkedList.printList();

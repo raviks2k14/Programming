@@ -59,24 +59,13 @@ public class LinkedListSwapNodes {
 				tempxprev = prev.next;
 				xFlag = true;
 				tempxnext = n.next;
-				// n.data = y;
 			} else if (n.data == y) {
 				tempyprev = prev.next;
 				yFlag = true;
 				tempynext = n.next;
-				// n.data = x;
 			}
-			
-			System.out.println(xFlag);
-			System.out.println(yFlag);
 
 			if (xFlag && yFlag) {
-				
-				System.out.println("Both X & Y values found");
-				System.out.println("tempxprev : "+tempxprev);
-				System.out.println("tempxnext : "+tempxnext);
-				System.out.println("tempyprev : "+tempyprev);
-				System.out.println("tempynext : "+tempynext);
 				
 				tempXFinal = tempxprev;
 				tempxprev = tempyprev;
@@ -85,12 +74,6 @@ public class LinkedListSwapNodes {
 				tempYFinal = tempxnext;
 				tempxnext = tempynext;
 				tempynext = tempYFinal;
-				
-				System.out.println("\n");
-				System.out.println("tempxprev : "+tempxprev);
-				System.out.println("tempxnext : "+tempxnext);
-				System.out.println("tempyprev : "+tempyprev);
-				System.out.println("tempynext : "+tempynext);
 				
 				xFlag = false;
 				yFlag = false;

@@ -1,0 +1,30 @@
+-------------------------------
+Data Type	Size	  Description
+-------------------------------
+byte	    1 byte	  Stores whole numbers from -128 to 127
+short	    2 bytes	  Stores whole numbers from -32,768 to 32,767
+int	        4 bytes	  Stores whole numbers from -2,147,483,648 to 2,147,483,647
+long	    8 bytes	  Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+float	    4 bytes	  Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits
+double	    8 bytes	  Stores fractional numbers. Sufficient for storing 15 decimal digits
+boolean	    1 bit	  Stores true or false values
+char	    2 bytes	  Stores a single character/letter or ASCII values
+
+
+KEY DIFFERENCE - CALL BY VALUE AND CALL BY REFERENCE
+----------------------------------------------------
+
+* In Call by value method original value is not modified whereas, in Call by reference method, the original value is modified.
+* In Call by value, a copy of the variable is passed whereas in Call by reference, a variable itself is passed.
+* In Call by value, actual and formal arguments will be created in different memory locations whereas in Call by reference, actual and formal arguments will be created in the same memory location.
+* Call by value is the default method in programming languages like C++, PHP, Visual Basic NET, and C# whereas Call by reference is supported only Java language.
+* Call by Value, variables are passed using a straightforward method whereas Call by Reference, pointers are required to store the address of variables.
+
+Test Case Design Techniques:
+----------------------------
+
+* Error Guessing
+* Equivalence Partitioning
+* Boundary Value Analysis 
+* Decision Table Technique - Combination of rules and conditions
+* State Transition Technique

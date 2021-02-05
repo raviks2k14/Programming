@@ -21,7 +21,6 @@ public class RecursiveMultiply {
 		if (smaller % 2 == 1) {
 			side2 = minProductHelper(smaller - s, bigger);
 		}
-		System.out.println(side1 + side2);
 		return side1 + side2;
 	}
 

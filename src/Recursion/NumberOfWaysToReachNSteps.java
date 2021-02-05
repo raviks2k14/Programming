@@ -36,7 +36,7 @@ public class NumberOfWaysToReachNSteps {
 	}
 
 	public static void main(String[] args) {
-		int numberOfSteps = 95;
+		int numberOfSteps = 18;
 		memo = new int[numberOfSteps + 1];
 		fillMemo(-1);
 		System.out.println(findNumberOfWays(numberOfSteps));

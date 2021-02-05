@@ -8,10 +8,10 @@ public class MagicIndex {
 			int mid = (low + high) / 2;
 			if (mid == arr[mid])
 				return mid;
-			if (mid > arr[mid])
-				return search(arr, (mid + 1), high);
-			else
+			if (arr[mid] > mid)
 				return search(arr, low, (mid - 1));
+			else
+				return search(arr, (mid + 1), high);
 		}
 
 		/*
@@ -21,7 +21,7 @@ public class MagicIndex {
 	}
 
 	public static void main(String[] args) {
-		int[] A = { -1, 0, 1, 3, 5, 10 };
+		int[] A = { -1, 0, 1, 4, 4, 10 };
 		MagicIndex m = new MagicIndex();
 		System.out.println("Magic index " + m.search(A, 0, A.length - 1));
 	}

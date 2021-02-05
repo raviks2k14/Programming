@@ -40,6 +40,7 @@ public class Uniquepaths {
 	public int uniquePaths(int[][] matrix) {
 		int[][] dp = matrix;
 
+		//Just printing the input matrix
 		for (int i = 0; i < dp.length; i++) {
 			System.out.println("\n");
 			for (int j = 0; j < dp[i].length; j++) {
@@ -103,10 +104,10 @@ public class Uniquepaths {
 	public static void main(String[] args) {
 		Uniquepaths obj = new Uniquepaths();
 		int[][] matrix = new int[][] { { 0, 0, 0, 0 }, { -1, -1, 0, 0 }, { -1, 0, 0, 0 } };
-		System.out.println("\n" + obj.uniquePaths(5, 10));
-		System.out.println("\n" + obj.recursiveUniquePaths(5, 10));
+		//System.out.println("\n" + obj.recursiveUniquePaths(5, 10));
+		System.out.println("\n" + obj.recursiveUniquePaths(2, 3));
 
-		// System.out.println("\n" + obj.uniquePaths(matrix));
+		 //System.out.println("\n" + obj.uniquePaths(matrix));
 	}
 
 }

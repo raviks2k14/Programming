@@ -47,7 +47,7 @@ public class NumberToWords {
 	}
 
 	public static void main(String[] args) {
-		Integer number = 99383;
+		Integer number = 1096;
 		System.out.println(getWords(number.toString().toCharArray()));
 	}
 

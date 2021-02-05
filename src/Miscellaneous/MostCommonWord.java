@@ -15,7 +15,7 @@ public class MostCommonWord {
 		List<String> bannedList = Arrays.asList(banned);
 		Map<String, Integer> strMap = new HashMap<String, Integer>();
 
-		String ar[] = paragraph.split("\\\\s|,|\\\\.|-");
+		String ar[] = paragraph.split(" ");
 
 		for (String s : ar) {
 			words.add(s);
@@ -56,8 +56,8 @@ public class MostCommonWord {
 	}
 
 	public static void main(String[] args) {
-		String paragraph = "a, a, a, a, b,b,b,c, c";
-		String[] banned = new String[] { "a" };
+		String paragraph = "Bob hit a ball, the hit BALL flew far after it was hit.";
+		String[] banned = new String[] { "hit" };
 		System.out.println(new MostCommonWord().mostCommonWord(paragraph, banned));
 	}
 

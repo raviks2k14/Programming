@@ -1,10 +1,35 @@
 package Miscellaneous;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class JavaMissingNumber {
 
-	public int getMissingNumber(int[] testArray) {
+	static List<Integer> iList = null;
+
+	public void buildList(Integer[] testArray) {
+		iList = new ArrayList<Integer>();
+
+		for (int i = 0; i < testArray.length + 1; i++) {
+			iList.add(i);
+		}
+
+		checkMissingNumber(testArray);
+	}
+
+	public void checkMissingNumber(Integer[] testArray) {
+		List<Integer> srcList = Arrays.asList(testArray);
+		
+		for(Integer checkInt : iList) {
+			if(!srcList.contains(checkInt)) {
+				System.out.println("The missing number is : "+checkInt);
+			}
+		}
+		
+	}
+
+	public int getMissingNumber(Integer[] testArray) {
 		Arrays.sort(testArray);
 		for (int i = 0; i < testArray.length; i++) {
 			if (i < testArray.length - 1) {
@@ -19,8 +44,9 @@ public class JavaMissingNumber {
 
 	public static void main(String[] args) {
 		JavaMissingNumber jmn = new JavaMissingNumber();
-		int[] testArray = new int[] { 9, 6, 4, 2, 3, 5, 7, 0, 1 };
-		System.out.println(jmn.getMissingNumber(testArray));
+		Integer[] testArray = new Integer[] { 0};
+		jmn.buildList(testArray);
+		//System.out.println(jmn.getMissingNumber(testArray));
 	}
 
 }

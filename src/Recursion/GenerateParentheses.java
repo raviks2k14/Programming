@@ -34,6 +34,7 @@ public class GenerateParentheses {
 	public static void main(String[] args) {
 		GenerateParentheses gpObj = new GenerateParentheses();
 		Set<String> resultantSet = gpObj.generateParenthesis(3);
+		
 		for(String str : resultantSet) {
 			System.out.print(str+", ");
 		}

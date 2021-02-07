@@ -24,7 +24,7 @@ public class MostCommonWord {
 
 		for (String eachword : words) {
 			eachword = removePunctuations(eachword);
-			if (!(bannedList.contains(eachword.toLowerCase())) || !(bannedList.contains(eachword.toLowerCase()))) {
+			if (!(bannedList.contains(eachword.toLowerCase()))) {
 				if (!(strMap.containsKey(eachword.toLowerCase()))) {
 					strMap.put(eachword.toLowerCase(), 1);
 				} else {

@@ -42,7 +42,7 @@ class Graph {
 	}
 }
 
-class Main {
+class RouteBetweenEdges {
 	// Function to perform BFS traversal from the source vertex in the graph to
 	// determine if the destination vertex is reachable from the source or not
 	public static boolean isConnected(Graph graph, int src, int dest, boolean[] discovered) {
@@ -93,7 +93,7 @@ class Main {
 		boolean[] discovered = new boolean[N];
 
 		// source and destination vertex
-		int src = 0, dest = 7;
+		int src = 4, dest = 3;
 
 		// perform BFS traversal from the source vertex to check the connectivity
 		if (isConnected(graph, src, dest, discovered)) {

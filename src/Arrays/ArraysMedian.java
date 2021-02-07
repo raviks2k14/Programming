@@ -1,4 +1,4 @@
-package Miscellaneous;
+package Arrays;
 
 public class ArraysMedian {
 

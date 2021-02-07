@@ -1,7 +1,6 @@
 package Arrays;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class ContainerMostWater {
 
@@ -21,14 +20,10 @@ public class ContainerMostWater {
 			}
 		}
 		
-		int max_area = 0;
+		Collections.sort(areaList);
 		
-		for(Integer area : areaList) {
-			if(area > max_area)
-				max_area = area;
-		}
-
-		return max_area;
+		return areaList.get(areaList.size()-1);
+	
 	}
 
 	public static void main(String[] args) {

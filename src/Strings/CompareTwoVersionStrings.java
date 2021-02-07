@@ -1,4 +1,5 @@
 package Strings;
+
 public class CompareTwoVersionStrings {
 
 	public int compareVersion(String version1, String version2) {
@@ -25,6 +26,8 @@ public class CompareTwoVersionStrings {
 
 		int i = 0;
 		int j = 0;
+		int maxiIndex = version1Array.length - 1;
+		int maxjIndex = version2Array.length - 1;
 		Integer version1Int = 0;
 		Integer version2Int = 0;
 
@@ -44,20 +47,42 @@ public class CompareTwoVersionStrings {
 			}
 		}
 
-		if (i > j) {
-			return 1;
-		} else if (i < j) {
-			return -1;
+		if (i > maxiIndex) {
+			boolean pGreater = false;
+			for (int p = j; p < version2Array.length; p++) {
+				version2Int = Integer.parseInt(version2Array[p]);
+				if (version2Int > 0) {
+					pGreater = true;
+					break;
+				}
+			}
+			if (pGreater) {
+				return -1;
+			}
+		}
+
+		if (j > maxjIndex) {
+			boolean pGreater = false;
+			for (int p = j; p < version1Array.length; p++) {
+				version1Int = Integer.parseInt(version1Array[p]);
+				if (version1Int > 0) {
+					pGreater = true;
+					break;
+				}
+			}
+			if (pGreater) {
+				return 1;
+			}
 		}
 
 		return 0;
 	}
 
 	public static void main(String[] args) {
-		System.out.println(new CompareTwoVersionStrings().compareVersion("0.1", "1.1"));
-		System.out.println(new CompareTwoVersionStrings().compareVersion("1.0.1", "1"));
-		System.out.println(new CompareTwoVersionStrings().compareVersion("7.5.2.4", "7.5.3"));
-		System.out.println(new CompareTwoVersionStrings().compareVersion("1.01", "1.001"));
-		System.out.println(new CompareTwoVersionStrings().compareVersion("1.0", "1.0.0"));
+//		System.out.println(new CompareTwoVersionStrings().compareVersion("0.1", "1.1"));
+//		System.out.println(new CompareTwoVersionStrings().compareVersion("1.0.1", "1"));
+		System.out.println(new CompareTwoVersionStrings().compareVersion("7.5.3.3.3", "7.5.3"));
+//		System.out.println(new CompareTwoVersionStrings().compareVersion("1.01", "1.001"));
+//		System.out.println(new CompareTwoVersionStrings().compareVersion("1.0", "1.0.0"));
 	}
 }

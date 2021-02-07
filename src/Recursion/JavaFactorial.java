@@ -1,4 +1,4 @@
-package Miscellaneous;
+package Recursion;
 
 public class JavaFactorial {
 

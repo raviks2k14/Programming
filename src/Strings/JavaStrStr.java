@@ -15,16 +15,14 @@ public class JavaStrStr {
 		if (needle == null || needle.length() == 0) {
 			return 0;
 		}
-
-		if (!(haystack.contains(needle))) {
-			return -1;
-		}
 		return haystack.indexOf(needle);
 	}
 
 	public static void main(String[] args) {
 		System.out.println(new JavaStrStr().strStr("hello", "ll"));
 		System.out.println(new JavaStrStr().strStr("aaaaa", "bba"));
+		System.out.println(new JavaStrStr().strStr("aaaaa", "ravi"));
+
 	}
 
 }

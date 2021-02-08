@@ -1,4 +1,4 @@
-package Miscellaneous;
+package Strings;
 
 import java.util.*;
 import java.util.Map.Entry;

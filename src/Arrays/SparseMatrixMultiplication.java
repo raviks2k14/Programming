@@ -1,4 +1,4 @@
-package Miscellaneous;
+package Arrays;
 
 public class SparseMatrixMultiplication {
 
@@ -16,7 +16,7 @@ public class SparseMatrixMultiplication {
 			for (int j = colStart; j < colEnd; j++) {
 				int colPointer = 0;
 				int rowPointer = 0;
-				while (rowPointer < B.length && colPointer < A[0].length) {
+				while (colPointer < A[0].length && rowPointer < B.length) {
 					int data = A[i][colPointer] * B[rowPointer][j];
 					sum += data;
 					rowPointer++;
@@ -32,7 +32,7 @@ public class SparseMatrixMultiplication {
 
 	public static void main(String[] args) {
 		SparseMatrixMultiplication smm = new SparseMatrixMultiplication();
-		int[][] matrix1 = new int[][] { { 1, 0, 0 }, { -1, 0, 3 } };
+		int[][] matrix1 = new int[][] { { 1, 0, 0 }, { -1, 0, 3 }, {2, 5, 8} };
 		int[][] matrix2 = new int[][] { { 7, 0, 0 }, { 0, 0, 0 }, { 0, 0, 1 } };
 		int[][] resultMatrix = smm.multiply(matrix1, matrix2);
 		int rowCount = resultMatrix.length;

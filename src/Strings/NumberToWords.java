@@ -12,8 +12,9 @@ public class NumberToWords {
 	static {
 		secondDegreeMap.put(0, "");
 		secondDegreeMap.put(1, "");
-		secondDegreeMap.put(3, "Thousand");
 		secondDegreeMap.put(2, "Hundred");
+		secondDegreeMap.put(3, "Thousand");
+		
 		thirdDegreeMap.put(2, "Twenty");
 		thirdDegreeMap.put(3, "Thirty");
 		thirdDegreeMap.put(4, "Forty");
@@ -22,6 +23,7 @@ public class NumberToWords {
 		thirdDegreeMap.put(7, "Seventy");
 		thirdDegreeMap.put(8, "Eighty");
 		thirdDegreeMap.put(9, "Ninty");
+		
 		forthDegreeMap.put(0, "");
 		forthDegreeMap.put(1, "One");
 		forthDegreeMap.put(2, "Two");
@@ -46,7 +48,6 @@ public class NumberToWords {
 	}
 
 	static void getWordings(Integer input) {
-		System.out.println("The input is : " + input);
 		String inputString = Integer.toString(input);
 		int i = 0;
 		int degree = 0;
@@ -78,7 +79,7 @@ public class NumberToWords {
 	}
 
 	public static void main(String[] args) {
-		Integer number = 8;
+		Integer number = 547890;
 
 		getWordings(number);
 

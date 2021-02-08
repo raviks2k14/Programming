@@ -28,7 +28,6 @@ public class WordSearch {
 		}
 
 		if (board[i][j] == word.charAt(k)) {
-			char temp = board[i][j];
 			board[i][j] = '#';
 			if (k == word.length() - 1) {
 				return true;
@@ -36,7 +35,6 @@ public class WordSearch {
 					|| dfs(board, word, i, j - 1, k + 1) || dfs(board, word, i, j + 1, k + 1)) {
 				return true;
 			}
-			//board[i][j] = temp;
 		}
 
 		return false;
@@ -45,7 +43,7 @@ public class WordSearch {
 	public static void main(String[] args) {
 		WordSearch wsObj = new WordSearch();
 		char[][] board = { { 'A', 'B', 'C', 'E' }, { 'S', 'F', 'C', 'S' }, { 'A', 'D', 'E', 'E' } };
-		System.out.println(wsObj.exist(board, "SFCE"));
+		System.out.println(wsObj.exist(board, "EES"));
 	}
 
 }

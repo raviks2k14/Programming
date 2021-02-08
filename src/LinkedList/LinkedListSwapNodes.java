@@ -49,8 +49,6 @@ public class LinkedListSwapNodes {
 		Node tempxn = null;
 		Node tempyprev = null;
 		Node tempyn = null;
-		Node tempXFinal = null;
-		Node tempYFinal = null;
 		boolean xFlag = false;
 		boolean yFlag = false;
 		while (n != null) {

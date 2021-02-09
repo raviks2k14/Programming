@@ -93,7 +93,7 @@ class RouteBetweenEdges {
 		boolean[] discovered = new boolean[N];
 
 		// source and destination vertex
-		int src = 4, dest = 3;
+		int src = 0, dest = 7;
 
 		// perform BFS traversal from the source vertex to check the connectivity
 		if (isConnected(graph, src, dest, discovered)) {
